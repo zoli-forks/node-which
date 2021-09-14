@@ -1,6 +1,6 @@
 {
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
-  "name": "which",
+  "name": "@zkochan/which",
   "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
   "version": "2.0.2",
   "repository": {

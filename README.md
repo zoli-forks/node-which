@@ -6,6 +6,10 @@ Finds the first instance of a specified executable in the PATH
 environment variable.  Does not cache the results, so `hash -r` is not
 needed when the PATH changes.
 
+Unlike the original version of this package, this does not look
+for the binary in the CWD on Windows. This is change was needed
+to avoid binary planting attacks.
+
 ## USAGE
 
 ```javascript

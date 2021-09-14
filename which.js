@@ -15,14 +15,8 @@ const getPathInfo = (cmd, opt) => {
   // If it has a slash, then we don't bother searching the pathenv.
   // just check the file itself, and that's it.
   const pathEnv = cmd.match(/\//) || isWindows && cmd.match(/\\/) ? ['']
-    : (
-      [
-        // windows always checks the cwd first
-        ...(isWindows ? [process.cwd()] : []),
-        ...(opt.path || process.env.PATH ||
+    : (opt.path || process.env.PATH ||
           /* istanbul ignore next: very unusual */ '').split(colon),
-      ]
-    )
   const pathExtExe = isWindows
     ? opt.pathExt || process.env.PATHEXT || '.EXE;.CMD;.BAT;.COM'
     : ''
