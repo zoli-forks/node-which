@@ -16,7 +16,7 @@ const getPathInfo = (cmd, opt) => {
   // just check the file itself, and that's it.
   const pathEnv = cmd.match(/\//) || isWindows && cmd.match(/\\/) ? ['']
     : (opt.path || process.env.PATH ||
-          /* istanbul ignore next: very unusual */ '').split(colon),
+          /* istanbul ignore next: very unusual */ '').split(colon)
   const pathExtExe = isWindows
     ? opt.pathExt || process.env.PATHEXT || '.EXE;.CMD;.BAT;.COM'
     : ''
